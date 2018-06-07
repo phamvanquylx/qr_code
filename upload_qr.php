@@ -1,23 +1,24 @@
 <?php
 
-$DOMAIN = 'http://localhost/qr/qr_js/images/';
-//$DOMAIN = 'http://iwantoutsource.com/qr_user/images/';
+define('DOMAIN', 'http://localhost/qr/qr_js/images/');
+//define('DOMAIN', 'http://iwantoutsource.com/qr_user/images/');
 
 function upload_qr($x,$y)
 {
-	$DOMAIN = 'http://localhost/qr/qr_js/images/';
-	//$DOMAIN = 'http://iwantoutsource.com/qr_user/images/';
 	$rootUrl = $x;
 	$rootUrls = str_replace(" ", "+", $rootUrl);
-	$up_rootUrls = 'images/' . $y .'/adquest_qr.png';
-	file_put_contents($up_rootUrls, fopen($rootUrls, 'r'));
+	$up_rootUrls_1 = 'images/' . $y .'/adquest_qr.png';
+	$up_rootUrls_2 = 'images/' . $y .'/adquest_qr.jpg';
+	file_put_contents($up_rootUrls_1, fopen($rootUrls, 'r'));
+	file_put_contents($up_rootUrls_2, fopen($rootUrls, 'r'));
 	
 	// get file in folder
 	$files1 = scandir("images/" . $y);
-	$link 	= $DOMAIN . $y. '/';
+	$link 	= DOMAIN . $y. '/';
 	$files2 = $link.$files1['2'];
+	$files3 = $link.$files1['3'];
 
-	return $files2;
+	return $files3;
 }
 
 if(isset($_POST['path_url']))
@@ -38,7 +39,7 @@ if(isset($_POST['path_vcard']))
 	
 	// get file in folder
 	$files1 = scandir('images/vcard');
-	$link 	= $DOMAIN . 'vcard/';
+	$link 	= DOMAIN . 'vcard/';
 	$files2 = $link.$files1['2'];
 
 	echo $files2;

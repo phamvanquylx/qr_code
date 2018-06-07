@@ -1,24 +1,30 @@
 /*  */
 /*  */
+.spinner-wrappers.off,
 .spinner-wrapper.off{
 	opacity: 0;
 	visibility: hidden;
 }
+.spinner-wrappers,
 .spinner-wrapper{
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	z-index: 9;
-	@include flex();
-	width: 100%;
-	background: rgba($theme-color, 0.9);
-	opacity: 1;
-	visibility: visible;
-	@include transition(all 0.3s ease-in-out);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9;
+  @include flex();
+  width: 100%;
+  background: rgba($theme-color, 0.9);
+  opacity: 1;
+  visibility: visible;
+  @include transition(all 0.3s ease-in-out);
 }
-.spinner {
+.spinner-wrappers{
+  position: fixed;
+  background: $theme-color;
+}
+.spinners, .spinner {
   width: 40px;
   height: 40px;
   margin: auto;
@@ -27,8 +33,7 @@
   -webkit-animation: sk-rotate 2.0s infinite linear;
   animation: sk-rotate 2.0s infinite linear;
 }
-
-.dot1, .dot2 {
+.dot1s, .dot2s, .dot1, .dot2 {
   width: 60%;
   height: 60%;
   display: inline-block;
@@ -40,8 +45,7 @@
   -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
   animation: sk-bounce 2.0s infinite ease-in-out;
 }
-
-.dot2 {
+.dot2s, .dot2 {
   top: auto;
   bottom: 0;
   -webkit-animation-delay: -1.0s;

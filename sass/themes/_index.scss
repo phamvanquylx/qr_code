@@ -88,11 +88,16 @@ select{
 		background: #d4d4d4;
 	}
 }
+.qr-chose[disabled]{
+	opacity: 0.4;
+	@include transition(all 0.3s);
+}
 .qr-chose{
 	display: inline-block;
 	width: 100%;
     padding-left: 40px;
     margin-top: 20px;
+    opacity: 1;
 	>*{
 		display: inline-block;
 		float: left;
@@ -120,7 +125,10 @@ select{
 	    &.active{
 		    color: #797d80;
 		    border-color: $theme-color;	    	
-	    }		
+	    }
+	    &.off{
+	    	cursor: no-drop;
+	    }
 	}
 }
 #qr-generator{

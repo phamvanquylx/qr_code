@@ -68,18 +68,18 @@
 							</div>								
 							<div class="wrapper-qr__img">
 								<img src="img/adquest_qr.png" alt="" disabled>
-								<div class="qr-chose">
+								<div class="qr-chose" disabled>
 								    <span class="qr-chose__text">
-								         Format:
+								        Format:
 								    </span>
-								    <div class="qr-chose__toggle active">
-								        JPG
+								    <div class="qr-chose__toggle open active" data-img="png">
+								        .PNG
 								    </div>
-								    <div class="qr-chose__toggle">
-								        EPS
+								    <div class="qr-chose__toggle open" data-img="jpg">
+								        .JPG
 								    </div>
-								    <div class="qr-chose__toggle">
-								        SVG
+								    <div class="qr-chose__toggle off">
+								        .SVG
 								    </div>
 								</div>
 								<div class="qr-btn">

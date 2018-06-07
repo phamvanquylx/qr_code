@@ -114,10 +114,16 @@ select{
 .wrapper-qr__img .qr-btn a[disabled]{
   background:#d4d4d4; }
 
+.qr-chose[disabled]{
+  opacity:.4;
+  -webkit-transition:all .3s;
+  transition:all .3s; }
+
 .qr-chose{
   width:100%;
   padding-left:40px;
-  margin-top:20px; }
+  margin-top:20px;
+  opacity:1; }
   .qr-chose,.qr-chose>*{
   display:inline-block; }
   .qr-chose>*{
@@ -143,6 +149,8 @@ select{
     .qr-chose .qr-chose__toggle.active{
       color:#797d80;
       border-color:#50b8e7; }
+    .qr-chose .qr-chose__toggle.off{
+      cursor:no-drop; }
 
 #qr-generator{
   min-height:511px; }
@@ -298,11 +306,11 @@ select{
   max-width:calc(100% - 150px);
   min-width:calc(100% - 150px);
   width:100%; }
-.spinner-wrapper.off{
+.spinner-wrapper.off,.spinner-wrappers.off{
   opacity:0;
   visibility:hidden; }
 
-.spinner-wrapper{
+.spinner-wrapper,.spinner-wrappers{
   position:absolute;
   top:0;
   left:0;
@@ -320,7 +328,11 @@ select{
   -webkit-transition:all .3s ease-in-out;
   transition:all .3s ease-in-out; }
 
-.spinner{
+.spinner-wrappers{
+  position:fixed;
+  background:#50b8e7; }
+
+.spinner,.spinners{
   width:40px;
   height:40px;
   margin:auto;
@@ -329,7 +341,7 @@ select{
   -webkit-animation:a 2s infinite linear;
   animation:a 2s infinite linear; }
 
-.dot1,.dot2{
+.dot1,.dot1s,.dot2,.dot2s{
   width:60%;
   height:60%;
   display:inline-block;
@@ -340,7 +352,7 @@ select{
   -webkit-animation:b 2s infinite ease-in-out;
   animation:b 2s infinite ease-in-out; }
 
-.dot2{
+.dot2,.dot2s{
   top:auto;
   bottom:0;
   -webkit-animation-delay:-1s;

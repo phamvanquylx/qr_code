@@ -1,17 +1,21 @@
 jQuery(document).ready(function($) {
 
-	// if($('.spinner-wrapper').length)
-	// {
-	// 	setTimeout(function(){ $('.spinner-wrapper').addClass('off'); }, 2000);
-	// }
+    
+    const _DOMAIN = 'http://localhost/qr/qr_js/';
+    // const _DOMAIN = 'http://iwantoutsource.com/qr_user/';
 
-    $_DOMAIN    = 'http://localhost/qr/qr_js/';
-    //$_DOMAIN    = 'http://iwantoutsource.com/qr_user/';
+    // Create session js
+    // sessionStorage.setItem('loading_page', true);
+    // if(sessionStorage.loading_page != true)
+    // {
+    // 	if($('.spinner-wrappers').length)
+    // 	{
+    //         setTimeout(function(){ $('.spinner-wrappers').addClass('off'); }, 3000);
+    // 	}
+    // }
 
     function qr_code($content)
     {
-        $_DOMAIN    = 'http://localhost/qr/qr_js/';
-        //$_DOMAIN    = 'http://iwantoutsource.com/qr_user/';
         $encoding   = $('.qr-encoding[name="encoding"]:checked').val();
         $size       = $('.qr-size[name="size"]:checked').val();
         $correction = $('.qr-correction option:checked').val();
@@ -21,6 +25,7 @@ jQuery(document).ready(function($) {
             $(".wrapper-qr__img img").attr("src", $path_qr);
             $('.wrapper-qr__img img').removeAttr('disabled');
             $('.wrapper-qr__img .qr-btn a').removeAttr('disabled');
+            $('.wrapper-qr__img .qr-chose').removeAttr('disabled');
             $('.wrapper-qr__img .qr-btn a').attr('download', '');
         }, 2000);
     }
@@ -44,7 +49,7 @@ jQuery(document).ready(function($) {
             qr_code($content);
 
             $.ajax({
-                url: $_DOMAIN + 'upload_qr.php',
+                url: _DOMAIN + 'upload_qr.php',
                 type: 'POST',
                 data : {
                     path_url : $path_qr
@@ -121,7 +126,7 @@ jQuery(document).ready(function($) {
                 $(this).attr('type', 'button');
                 $path_qr = vcard.save();
                 $.ajax({
-                    url: $_DOMAIN + 'upload_qr.php',
+                    url: _DOMAIN + 'upload_qr.php',
                     type: 'POST',
                     data : {
                         path_vcard : $path_qr
@@ -158,7 +163,7 @@ jQuery(document).ready(function($) {
             qr_code($content);
 
             $.ajax({
-                url: $_DOMAIN + 'upload_qr.php',
+                url: _DOMAIN + 'upload_qr.php',
                 type: 'POST',
                 data : {
                     path_text : $path_qr
@@ -189,7 +194,7 @@ jQuery(document).ready(function($) {
             qr_code($content);
 
             $.ajax({
-                url: $_DOMAIN + 'upload_qr.php',
+                url: _DOMAIN + 'upload_qr.php',
                 type: 'POST',
                 data : {
                     path_email : $path_qr
@@ -219,7 +224,7 @@ jQuery(document).ready(function($) {
             qr_code($content);
 
             $.ajax({
-                url: $_DOMAIN + 'upload_qr.php',
+                url: _DOMAIN + 'upload_qr.php',
                 type: 'POST',
                 data : {
                     path_sms : $path_qr
@@ -246,7 +251,7 @@ jQuery(document).ready(function($) {
             qr_code($content);
 
             $.ajax({
-                url: $_DOMAIN + 'upload_qr.php',
+                url: _DOMAIN + 'upload_qr.php',
                 type: 'POST',
                 data : {
                     path_facebook : $path_qr
@@ -262,5 +267,28 @@ jQuery(document).ready(function($) {
             });
         });
     }    
+
+    if($('.qr-chose .qr-chose__toggle').length)
+    {
+        $('.qr-chose .qr-chose__toggle.open').click(function(){
+            $data_img = $(this).attr('data-img');
+            $qr_btn   = $('.wrapper-qr__img .qr-btn a').attr('href');
+            if($qr_btn != '#')
+            {
+                $('.qr-chose .qr-chose__toggle.open').removeClass('active');
+                $(this).addClass('active');
+                if($data_img == 'png')
+                {
+                    $data = $qr_btn.replace(".jpg", ".png");
+                    $('.wrapper-qr__img .qr-btn a').attr("href", $data);
+                }
+                else if($data_img == 'jpg')
+                {
+                    $data = $qr_btn.replace(".png", ".jpg");
+                    $('.wrapper-qr__img .qr-btn a').attr("href", $data);
+                }
+            }
+        });
+    }
 
 });
