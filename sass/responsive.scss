@@ -1,0 +1,147 @@
+@import "vars/vars-global";
+@import "mixins/mixins";
+@import "mixins/template";
+/*
+*  Responsive
+*/
+@media (min-width: 1200px) {}
+/* Max Width 1200px  */
+
+@media (max-width: 1199px) {
+	.wrapper-qr h1{
+		font-size: 17px;
+	}
+	.qr-chose{
+		padding-left: 0;
+	}
+}
+@media (max-width: 1023px) {}
+@media (max-width: 991px) {
+	#qr-generator .nav-tabs li a{
+		margin-top: 10px;
+	}
+	.tab-content{
+		padding-right: 0;
+	}
+	.qr-chose .qr-chose__toggle{
+		min-width: 35px;
+		margin: 0px 2px;
+		font-size: 12px;
+	}
+	.qr-chose .qr-chose__text{
+		font-size: 13px;
+		min-width: 60px;
+	}
+}
+@media (max-width: 767px) {
+	.wrapper-qr{
+		padding-bottom: 15px;
+	}
+	.wrapper-qr__img {
+	    padding-bottom: 0;
+	}
+	.wrapper-qr{
+		height: auto;
+		padding-top: 15px;
+	}
+	header{
+		margin-bottom: 15px;
+	}
+	#qr-generator{
+		height: auto;
+		min-height: auto;
+		margin-bottom: 15px;
+		form{
+			margin-bottom: 0;
+		}
+		button[type="submit"]{
+			margin-top: 10px;
+		}
+		.nav-tabs{
+			margin-bottom: 15px;
+		}
+		fieldset{
+			margin-bottom: 15px;
+		}
+		fieldset input[type="text"]{
+			padding: 12px 15px;
+			font-size: 16px;
+		}
+	}
+	#qr-result{
+		margin-bottom: 15px;
+	}
+}
+@media (max-width: 576px) {
+	header .main-logo{
+		width: 100%;
+		text-align: center;
+	}
+	.wrapper-qr h1{
+		display: none;
+		margin-top: 15px;
+		width: 100%;
+		text-align: center;
+	}
+	.qr-coming{
+		padding-top: 15px;
+	}
+	#qr-generator .nav-tabs li a{
+		font-size: 15px;
+	}
+	#qr-generator .qr-vcard-form legend,
+	#qr-generator .qr-input-sms legend{
+		max-width: 100%;
+		min-width: 100%;
+		line-height: 22px;
+		color: #616568;
+		font-size: 16px;
+		font-weight: 600;
+		margin-bottom: 10px;		
+	}
+	#qr-generator .qr-vcard-form input,
+	#qr-generator .qr-input-sms textarea,
+	#qr-generator .qr-input-sms input,
+	#qr-generator .qr-input-sms select{
+		width: 100%;
+		min-width: 100%;
+		max-width: 100%;
+	}
+}
+@media (max-width: 479px) {
+	.qr-submit-form{
+	    padding: 12px 25px;
+	}
+	.qr-btn-reload{
+	    padding: 12px 25px;
+	}
+	#qr-generator .nav-tabs li a {
+	    font-size: 14px;
+	    margin-right: 12px;
+	}
+}
+@media (max-width: 414px) {
+	.qr-btn-reload {
+	    padding: 12px 20px;
+	}
+	button[type="submit"] {
+	    padding: 12px 15px;
+	}
+}
+@media (max-width: 375px) {
+	.qr-submit-form{
+		width: 100%;
+	}
+	.qr-btn-reload{
+		margin-left: 0;
+		width: 100%;
+		text-align: center;
+	}
+	.qr-control{
+		margin-right: 10px;
+	}
+	.qr-control:last-child{
+		margin-right: 0;
+	}
+}
+@media (max-width: 320px) {}

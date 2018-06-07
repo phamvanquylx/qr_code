@@ -1,0 +1,45 @@
+/*  */
+/* Vcard */
+.wrapper-qr.qr-vcard{
+	height: auto;
+	padding-bottom: 50px;
+}
+#qr-generator{
+	.qr-vcard-form{
+		fieldset{
+			margin-bottom: 15px;
+		}
+		input{
+		    border: 2px solid #eaeaea;
+		    color: #616568;
+		    background: #fff!important;
+		    box-shadow: none!important;
+		    outline: 0!important;
+		    border-radius: 2px!important;
+	        margin-bottom: 5px;
+	        padding: 6px 12px;
+	        height: 42px;
+	        max-width: calc(100% - 150px);
+	        min-width: calc(100% - 150px);
+	        width: 100%;
+	        display: block;
+	        float: left;
+		}
+		legend{
+			max-width: 150px;
+			min-width: 80px;
+			width: 100%;
+			float: left;
+			line-height: 42px;
+			font-size: 14px;
+		    font-weight: 600;
+		    color: #797d80;
+			margin-bottom: 5px;
+		}
+	}
+}
+
+
+
+
+

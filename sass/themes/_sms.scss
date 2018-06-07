@@ -1,0 +1,45 @@
+/*  */
+/* Vcard */
+#qr-generator .qr-input-sms{
+	textarea,
+	input{
+	    border: 2px solid #eaeaea;
+	    color: #616568;
+	    background: #fff !important;
+	    box-shadow: none !important;
+	    outline: 0 !important;
+	    border-radius: 2px !important;
+	    margin-bottom: 5px;
+	    padding: 6px 12px;
+	    height: 42px;
+	    display: block;
+	    float: left;
+	    width: 100%;
+        max-width: calc(100% - 150px);
+    	min-width: calc(100% - 150px);
+    	width: 100%;	
+	}
+	textarea{
+	    height: 100px;
+	}
+	legend {
+	    max-width: 150px;
+	    min-width: 80px;
+	    width: 100%;
+	    float: left;
+	    line-height: 42px;
+	    font-size: 14px;
+	    font-weight: 600;
+	    color: #797d80;
+	    margin-bottom: 5px;
+	}
+	select{
+		height: 42px;
+        max-width: calc(100% - 150px);
+    	min-width: calc(100% - 150px);
+    	width: 100%;
+	}
+}
+
+
+

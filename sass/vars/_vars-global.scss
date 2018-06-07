@@ -1,0 +1,70 @@
+/* // Color
+// ------------------------- */
+$green           : #57bf6d !default;
+$white           : #fff !default;
+$black           : #000 !default;
+$nocolor         : transparent !default;
+$yellow          : #e9c931 !default;
+$yellow-dark     : #f2cb2e !default;
+$red             : #ec4046 !default;
+$red-dark        : #ce4f3e !default;
+$orange          : #f7941d !default;
+$blue            : #012e5a !default;
+$dark            : #121B1F !default;
+$cyan            : #01a3d4 !default;
+$turquoise       : #9c619c !default;
+$brown-light	 : #eb5454 !default;
+$color-1		 : #cb2d41 !default;
+$color-2		 : #b3b3b3 !default;
+$color-3	     : #909cad !default;
+
+/* // Align
+// ------------------------- */
+$align-center    : center !important;
+$align-left      : left !important;
+$align-right     : right !important;
+
+/* //Font
+//-------------------------- */
+$font-family	        : 'Source Sans Pro', sans-serif !default;
+$font-family-second		: "Source Sans Pro", sans-serif !default;
+
+/* // Themes colors
+// ------------------------- */
+$theme-color                     : #50B8E7 !default;
+$theme-color-second  			 : #90c52d !default;
+$link-color                      : $theme-color !default;
+
+//** Background color for `<body>`.
+$body-bg:                  #fff !default; 
+$base-bg: 				   #005691 !default;
+$base-bg-second: 		   #2db6a3 !default;
+
+//** Global text color on `<body>`.
+$text-color                      : #616568 !default;
+$text-color-second				 : #797d80 !default;
+$text-color-three				 : #888 !default;
+
+//== Border color
+$border-color 					 : #ebebeb !default;
+
+$image-theme-path                : '../images/' !default;
+$image-theme-skin                : '../images/' !default;
+$woo-font-path                   : '../fonts/' !default;
+$image-icon-url                  : "../images/icons/global.png";
+
+/* // Font-family
+// ------------------------- */
+$fa-version                      : 4.0.3 !default;
+$theme-font-icon-name            : 'FontAwesome' !default;
+$theme-font-icon-name2           : "IcoFont" !default;
+$theme-font-path                 : '../fonts/' !default;
+$icon-font-name                  : 'icomoon' !default;
+
+/* // Text transform
+// ------------------------- */
+$text-none       : none !important;
+$text-uppercase  : uppercase !important;
+$text-capitalize : capitalize !important;
+$text-lowercase  : lowercase !important;
+$text-inherit    : inherit !important;
